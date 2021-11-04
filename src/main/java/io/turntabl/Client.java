@@ -45,4 +45,20 @@ public class Client {
         this.clientID = clientID;
         this.servicelevel = servicelevel;
     } // End of constructor
+
+    public void displayClientInfo(Client client){
+        int index = Register.clientRegister.indexOf(client);
+        System.out.println("First client name: " + Register.clientRegister.get(index).getClientName());
+        System.out.println("First client id:  " + Register.clientRegister.get(index).getClientID());
+        System.out.println("First client level: " + Register.clientRegister.get(index).getServicelevel());
+    }
+
+//    public void addClientToList(PrivateClient Client){
+//        Register.clientRegister.add(new PrivateClient(clientName, clientID, servicelevel));
+//    }
+//
+//    public void addClientToList(CorporateClient client){
+//        Register.clientRegister.add(new CorporateClient(clientID, servicelevel));
+//    }
+
 }

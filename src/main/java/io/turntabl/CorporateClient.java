@@ -11,7 +11,8 @@ public class CorporateClient extends Client implements AccountManager{
     // CorporateClient constructor
     public CorporateClient(int clientID, ServiceLevel servicelevel) {
         super(clientID, servicelevel);
-    } // End of constructor
 
+//        addClientToList(new CorporateClient(clientID, servicelevel));
+    } // End of constructor
 
 }
