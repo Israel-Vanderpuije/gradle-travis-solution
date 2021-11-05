@@ -18,7 +18,6 @@ public class Main {
 
         //display client information
         cClient1.displayClientInfo(cClient1);
-        System.out.println();
         pClient1.displayClientInfo(pClient1);
 
     }

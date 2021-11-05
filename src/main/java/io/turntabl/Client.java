@@ -57,11 +57,15 @@ public class Client {
         this.manager = manager;
     } // End of constructor
 
+    //Display client information
     public void displayClientInfo(Client client){
         int index = Register.clientRegister.indexOf(client);
-        System.out.println("First client name: " + Register.clientRegister.get(index).getClientName());
-        System.out.println("First client id:  " + Register.clientRegister.get(index).getClientID());
-        System.out.println("First client level: " + Register.clientRegister.get(index).getServicelevel());
+        System.out.println("Client name: " + Register.clientRegister.get(index).getClientName());
+        System.out.println("Client id:  " + Register.clientRegister.get(index).getClientID());
+        System.out.println("Client level: " + Register.clientRegister.get(index).getServicelevel());
+        System.out.println("Client manager: " + Register.clientRegister.get(index).getManager().managerName);
+        System.out.println("Client managerID: " + Register.clientRegister.get(index).getManager().managerID);
+        System.out.println();
     }
 
 }
