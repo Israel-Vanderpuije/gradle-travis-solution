@@ -1,18 +1,16 @@
 package io.turntabl;
 
-public class CorporateClient extends Client implements AccountManager{
+public class CorporateClient extends Client{
 
     //Getting client name
     @Override
     public String getClientName() {
-        return AccountManager.managerName;
+        return manager.managerName;
     }
 
     // CorporateClient constructor
-    public CorporateClient(int clientID, ServiceLevel servicelevel) {
-        super(clientID, servicelevel);
-
-//        addClientToList(new CorporateClient(clientID, servicelevel));
+    public CorporateClient(int clientID, ServiceLevel servicelevel, AccountManager manager) {
+        super(clientID, servicelevel, manager);
     } // End of constructor
 
 }

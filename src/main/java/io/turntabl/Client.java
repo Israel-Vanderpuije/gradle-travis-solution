@@ -6,6 +6,7 @@ public class Client {
     private int clientID;
     enum ServiceLevel {Gold, Platinum, Premium}
     private ServiceLevel servicelevel;
+    AccountManager manager;
 
 
     // Setters and Getters
@@ -31,19 +32,29 @@ public class Client {
 
     public void setServicelevel(ServiceLevel servicelevel) {
         this.servicelevel = servicelevel;
+    }
+
+    public AccountManager getManager() {
+        return manager;
+    }
+
+    public void setManager(AccountManager manager) {
+        this.manager = manager;
     } // End of setters and getters
 
 
     // Overloaded constructor for client
-    public Client(String clientName, int clientID, ServiceLevel servicelevel) {
+    public Client(String clientName, int clientID, ServiceLevel servicelevel, AccountManager manager) {
         this.clientName = clientName;
         this.clientID = clientID;
         this.servicelevel = servicelevel;
+        this.manager = manager;
     }
 
-    public Client(int clientID, ServiceLevel servicelevel) {
+    public Client(int clientID, ServiceLevel servicelevel, AccountManager manager) {
         this.clientID = clientID;
         this.servicelevel = servicelevel;
+        this.manager = manager;
     } // End of constructor
 
     public void displayClientInfo(Client client){
@@ -52,13 +63,5 @@ public class Client {
         System.out.println("First client id:  " + Register.clientRegister.get(index).getClientID());
         System.out.println("First client level: " + Register.clientRegister.get(index).getServicelevel());
     }
-
-//    public void addClientToList(PrivateClient Client){
-//        Register.clientRegister.add(new PrivateClient(clientName, clientID, servicelevel));
-//    }
-//
-//    public void addClientToList(CorporateClient client){
-//        Register.clientRegister.add(new CorporateClient(clientID, servicelevel));
-//    }
 
 }
